@@ -1,6 +1,6 @@
 FROM golang:latest
 
-#LABEL maintainer 
+LABEL maintainer "Mohammed <mohammed@kloudone.com>"
 WORKDIR /app
 
 COPY go.mod .
