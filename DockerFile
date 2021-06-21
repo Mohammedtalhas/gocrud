@@ -11,6 +11,8 @@ RUN go mod download
 
 COPY . .
 
+ENV PORT 8080
+
 RUN go build
 
 CMD [ "./gocrud.exe " ]

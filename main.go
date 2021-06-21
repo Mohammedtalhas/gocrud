@@ -3,10 +3,11 @@ package main
 
 import (
 	"fmt"
+	"os"
 
-	"crud/Config"
-	"crud/Models"
-	"crud/Routes"
+	"github.com/Mohammedtalhas/gocrud/Config"
+	"github.com/Mohammedtalhas/gocrud/Models"
+	"github.com/Mohammedtalhas/gocrud/Routes"
 
 	"github.com/jinzhu/gorm"
 )
@@ -22,5 +23,5 @@ func main() {
 	Config.DB.AutoMigrate(&Models.User{})
 	r := Routes.SetupRouter()
 	//running
-	r.Run()
+	r.Run(os.Getenv("PORT"))
 }
